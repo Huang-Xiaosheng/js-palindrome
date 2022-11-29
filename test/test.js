@@ -20,6 +20,11 @@ describe("Phrase", function () {
       assert(mixedCase.palindrome());
     });
 
+    it("should return true for a non_ASCII palindrome", function () {
+      let nonASCII = new Phrase("我是我");
+      assert(nonASCII.palindrome());
+    });
+
     it("should return true for a palindrome with punctuation", function () {
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
       assert(punctuatedPalindrome.palindrome());
